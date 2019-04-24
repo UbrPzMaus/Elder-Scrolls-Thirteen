@@ -73,8 +73,8 @@
 	desc = "An iron mace, a good beginner's bludgeon."
 	icon_state = "iron_mace"
 	item_state = "iron_mace"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	hitsound = 'sound/weapons/chainhit.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	force = 20
