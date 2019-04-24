@@ -91,7 +91,6 @@
 	item_state = "claymore"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound =
 	force = 25
 	armour_penetration = 35
 	throwforce = 10
@@ -103,7 +102,6 @@
 	item_state = "claymore"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound =
 	force = 30
 	armour_penetration = 40
 	throwforce = 15
@@ -115,7 +113,6 @@
 	item_state = "claymore"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound =
 	force = 35
 	armour_penetration = 45
 	throwforce = 15
@@ -127,7 +124,6 @@
 	item_state = "claymore"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound =
 
 /obj/item/hatchet/waraxe
 	name = "iron waraxe"
