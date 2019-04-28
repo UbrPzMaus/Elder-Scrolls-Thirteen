@@ -5,8 +5,8 @@
 /obj/item/claymore/sword
 	name = "iron sword"
 	desc = "A simple iron sword."
-	icon_state = "claymore"
-	item_state = "claymore"
+	icon_state = "iron_sword"
+	item_state = "iron_sword"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -18,8 +18,8 @@
 /obj/item/claymore/sword/steel
 	name = "steel sword"
 	desc = "A well forged steel sword."
-	icon_state = "claymore"
-	item_state = "claymore"
+	icon_state = "steel_sword"
+	item_state = "steel_sword"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -87,10 +87,10 @@
 /obj/item/claymore/mace/steel
 	name = "steel mace"
 	desc = "A strong steel mace."
-	icon_state = "claymore"
-	item_state = "claymore"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	icon_state = "steel_mace"
+	item_state = "steel_mace"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 25
 	armour_penetration = 35
 	throwforce = 10
