@@ -666,7 +666,7 @@ proc/TextPreview(var/string,var/len=40)
 				if("charges")
 					statpanel("[S.panel]","[S.charge_counter]/[S.charge_max]",S)
 				if("holdervar")
-					statpanel("[S.panel]","[S.holder_var_type] [S.holder_var_amount]",S)
+					statpanel("[S.panel]","[S.holder_var_amount] [S.holder_var_name]",S)
 
 #define MOB_FACE_DIRECTION_DELAY 1
 

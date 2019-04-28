@@ -108,6 +108,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 
 	var/holder_var_type = "bruteloss" //only used if charge_type equals to "holder_var"
 	var/holder_var_amount = 20 //same. The amount adjusted with the mob's var when the spell is used
+	var/holder_var_name = "health" //for displaying
 
 	var/clothes_req = TRUE //see if it requires clothes
 	var/cult_req = FALSE //SPECIAL SNOWFLAKE clothes required for cult only spells
@@ -224,23 +225,33 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 			if("charges")
 				charge_counter-- //returns the charge if the targets selecting fails
 			if("holdervar")
-				adjust_var(user, holder_var_type, holder_var_amount)
+				adjust_var(user, holder_var_type, (0-holder_var_amount))
 	if(action)
 		action.UpdateButtonIcon()
 	return TRUE
 
-/obj/effect/proc_holder/spell/proc/charge_check(mob/user, silent = FALSE)
+/obj/effect/proc_holder/spell/proc/charge_check(mob/living/user, silent = FALSE)
 	switch(charge_type)
 		if("recharge")
 			if(charge_counter < charge_max)
 				if(!silent)
 					to_chat(user, still_recharging_msg)
 				return FALSE
+			else
+				return TRUE
 		if("charges")
 			if(!charge_counter)
 				if(!silent)
 					to_chat(user, "<span class='notice'>[name] has no charges left.</span>")
 				return FALSE
+		if("holdervar")
+			if(holder_var_type == "magicka") //you CAN crit/kill yourself casting equilibrium if you really want. i guess.
+				if(user.magicka < holder_var_amount)
+					return FALSE
+				else
+					return TRUE
+			else
+				return TRUE
 	return TRUE
 
 /obj/effect/proc_holder/spell/proc/invocation(mob/user = usr) //spelling the spell out and setting it on recharge/reducing charges amount
