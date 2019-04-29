@@ -39,6 +39,9 @@
 	handle_changeling()
 
 	if(stat != DEAD)
+		handle_magicka()
+
+	if(stat != DEAD)
 		return 1
 
 ///////////////
@@ -671,3 +674,18 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		return
 
 	heart.beating = !status
+
+/////////////////////////////////////
+//////////YER A WIZARD HARRY/////////
+/////////////////////////////////////
+
+/mob/living/carbon/proc/handle_magicka()
+	if(magicka < 0) //you can't have negative magicka
+		magicka = 0 //so stop trying
+	if(magicka > maxMagicka) //you also can't have more than your max
+		magicka = maxMagicka //so stop trying
+	if(anti_magic_check())
+		magicka = 0 //antimagic is in effect, so set magicka to
+		return //and don't allow any to be recovered!
+	if(magicka < maxMagicka)
+		magicka = min(maxMagicka, magicka += magicka_recharge_rate) //less than max magicka? recover MRR, up to your max.

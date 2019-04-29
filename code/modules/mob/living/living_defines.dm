@@ -15,7 +15,7 @@
 
 	var/magicka = 100 //base magicka for TES13 casting
 	var/maxMagicka = 100 //the above, but max magicka
-	var/magicka_recharge_rate = 0.2 //recharge rate of magicka per decisecond (10*magicka_recharge_rate per second)
+	var/magicka_recharge_rate = 4 //recharge rate of magicka per Life() tick (every 2s)
 
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
 	var/bruteloss = 0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)

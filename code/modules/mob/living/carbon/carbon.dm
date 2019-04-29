@@ -447,6 +447,11 @@
 		if(locate(/obj/item/assembly/health) in src)
 			stat(null, "Health: [health]")
 
+	if(locate(/obj/effect/proc_holder/spell) in src.mind.spell_list) //don't display to muggles
+		if(statpanel("Spells"))
+				stat("Magicka:", "[magicka]")
+				stat("Max Magicka:", "[maxMagicka]")
+				stat("Magicka per second:", "[magicka_recharge_rate]")
 	add_abilities_to_panel()
 
 /mob/living/carbon/attack_ui(slot)
