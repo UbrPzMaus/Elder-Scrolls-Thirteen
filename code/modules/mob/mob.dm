@@ -666,7 +666,11 @@ proc/TextPreview(var/string,var/len=40)
 				if("charges")
 					statpanel("[S.panel]","[S.charge_counter]/[S.charge_max]",S)
 				if("holdervar")
-					statpanel("[S.panel]","[S.holder_var_amount] [S.holder_var_name]",S)
+					if(!istype(S, /obj/effect/proc_holder/spell/magicka/channelled)) //exclude channels, we're covering those later
+						statpanel("[S.panel]","[S.holder_var_amount] [S.holder_var_name]",S)
+	for(var/obj/effect/proc_holder/spell/magicka/channelled/S in spells) //for channelled spells only.
+		if(S.can_be_cast_by(src))
+			statpanel("[S.panel]","[S.drain] [S.holder_var_name]/sec",S)
 
 #define MOB_FACE_DIRECTION_DELAY 1
 

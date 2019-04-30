@@ -29,6 +29,12 @@
 	var/socks = "Nude" //Which socks the player wants
 	var/backbag = DBACKPACK		//Which backpack type the player has chosen.
 
+	var/magicka = 100 //base magicka for TES13 casting
+	var/maxMagicka = 100 //the above, but max magicka, not including gear
+	var/baseMagicka = 100 //the above, but including gear.
+	var/magicka_recharge_rate = 4 //recharge rate of magicka per Life() tick (every 2s), not including gear
+	var/total_mrr = 4 //see above, but including gear.
+
 	//Equipment slots
 	var/obj/item/clothing/wear_suit = null
 	var/obj/item/clothing/w_uniform = null

@@ -230,7 +230,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		action.UpdateButtonIcon()
 	return TRUE
 
-/obj/effect/proc_holder/spell/proc/charge_check(mob/living/user, silent = FALSE)
+/obj/effect/proc_holder/spell/proc/charge_check(mob/living/carbon/human/user, silent = FALSE)
 	switch(charge_type)
 		if("recharge")
 			if(charge_counter < charge_max)
