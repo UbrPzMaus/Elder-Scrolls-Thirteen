@@ -31,6 +31,9 @@
 	if(.) //not dead
 		handle_active_genes()
 
+
+	handle_magicka(src) //magicka stuff
+
 	if(stat != DEAD)
 		//heart attack stuff
 		handle_heart()

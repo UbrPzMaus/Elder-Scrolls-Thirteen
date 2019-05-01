@@ -61,6 +61,12 @@
 /mob/living/carbon/human/Stat()
 	..()
 
+	if(locate(/obj/effect/proc_holder/spell) in src.mind.spell_list) //don't display to muggles
+		if(statpanel("Spells"))
+			stat("Magicka:", "[magicka]")
+			stat("Max Magicka:", "[maxMagicka]")
+			stat("Magicka per second:", "[total_mrr]")
+
 	if(statpanel("Status"))
 		stat(null, "Intent: [a_intent]")
 		stat(null, "Move Mode: [m_intent]")
