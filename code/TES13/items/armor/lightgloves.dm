@@ -73,4 +73,11 @@
 	desc = "Whiterun Guard gloves reinforced with metal and more leather padding, typically worn by the Guard Captain."
 	icon_state = "cuirassgloves"
 	item_state = "cuirassgloves"
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 0, "energy" = 40, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 35, "acid" = 0)
+
+/obj/item/clothing/gloves/combat/light/leather/whiteguard/commander
+	name = "whiterun guard commander gloves"
+	desc = "Durable Whiterun guard gloves, fitted with strong reinforcements. Worn by the Guard Commander."
+	icon_state = "cuirassgloves"
+	item_state = "cuirassgloves"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 0, "energy" = 45, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 0)
