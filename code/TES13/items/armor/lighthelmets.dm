@@ -79,4 +79,11 @@
 	desc = "A Whiterun guard helmet reinforced with metal and leather, worn by the Guard Captain."
 	icon_state = "whiteguard"
 	item_state = "whiteguard"
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 0, "energy" = 40, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 35, "acid" = 0)
+
+/obj/item/clothing/head/helmet/light/leather/whiteguard/commander
+	name = "whiterun guard commander helmet"
+	desc = "A heavily reinforced and strong Whiterun guard helmet. Reserved for the Guard Commander."
+	icon_state = "whiteguard"
+	item_state = "whiteguard"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 0,"energy" = 45, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 0)
