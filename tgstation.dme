@@ -2819,6 +2819,7 @@
 #include "code\TES13\items\weapons\onehanded.dm"
 #include "code\TES13\items\weapons\twohanded.dm"
 #include "code\TES13\magic\magicka.dm"
+#include "code\TES13\magic\restoration.dm"
 #include "code\TES13\magic\spelltypes.dm"
 #include "code\TES13\smithing\ingots.dm"
 #include "interface\interface.dm"

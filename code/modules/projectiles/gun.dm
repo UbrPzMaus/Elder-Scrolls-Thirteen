@@ -501,11 +501,11 @@
 		return
 
 	if(user == target)
-		target.visible_message("<span class='warning'>[user] sticks [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
-			"<span class='userdanger'>You stick [src] in your mouth, ready to pull the trigger...</span>")
+		target.visible_message("<span class='warning'>[user] aims [src] at [user.p_their()] head, ready to shoot...</span>", \
+			"<span class='userdanger'>You aim [src] at your head, ready to shoot...</span>")
 	else
-		target.visible_message("<span class='warning'>[user] points [src] at [target]'s head, ready to pull the trigger...</span>", \
-			"<span class='userdanger'>[user] points [src] at your head, ready to pull the trigger...</span>")
+		target.visible_message("<span class='warning'>[user] points [src] at [target]'s head, ready to shoot...</span>", \
+			"<span class='userdanger'>[user] points [src] at your head, ready to shoot...</span>")
 
 	semicd = TRUE
 
@@ -520,7 +520,7 @@
 
 	semicd = FALSE
 
-	target.visible_message("<span class='warning'>[user] pulls the trigger!</span>", "<span class='userdanger'>[(user == target) ? "You pull" : "[user] pulls"] the trigger!</span>")
+	target.visible_message("<span class='warning'>[user] shoots!</span>", "<span class='userdanger'>[(user == target) ? "You shoot" : "[user] shoots"]!</span>")
 
 	if(chambered && chambered.BB)
 		chambered.BB.damage *= 5

@@ -239,7 +239,7 @@
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
 
 /obj/item/twohanded/fireaxe/update_icon()  //Currently only here to fuck with the on-mob icons.
-	icon_state = "fireaxe[wielded]"
+	icon_state = "[initial(icon_state)][wielded]"
 	return
 
 /obj/item/twohanded/fireaxe/suicide_act(mob/user)

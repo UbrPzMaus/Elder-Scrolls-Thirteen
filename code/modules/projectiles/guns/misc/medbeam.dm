@@ -13,6 +13,7 @@
 	var/active = 0
 	var/datum/beam/current_beam = null
 	var/mounted = 0 //Denotes if this is a handheld or mounted version
+	var/healamt = 4 //how much brute/burn it heals per tick
 
 	weapon_weight = WEAPON_MEDIUM
 
@@ -76,7 +77,7 @@
 	if(get_dist(source, current_target)>max_range || !los_check(source, current_target))
 		LoseTarget()
 		if(isliving(source))
-			to_chat(source, "<span class='warning'>You lose control of the beam!</span>")
+			to_chat(source, "<span class='warning'>Your target is out of range!</span>")
 		return
 
 	if(current_target)
@@ -102,9 +103,7 @@
 				return 0
 		for(var/obj/effect/ebeam/medical/B in turf)// Don't cross the str-beams!
 			if(B.owner.origin != current_beam.origin)
-				explosion(B.loc,0,3,5,8)
-				qdel(dummy)
-				return 0
+				return 1
 	qdel(dummy)
 	return 1
 
@@ -114,17 +113,17 @@
 /obj/item/gun/medbeam/proc/on_beam_tick(var/mob/living/target)
 	if(target.health != target.maxHealth)
 		new /obj/effect/temp_visual/heal(get_turf(target), "#80F5FF")
-	target.adjustBruteLoss(-4)
-	target.adjustFireLoss(-4)
-	target.adjustToxLoss(-1)
-	target.adjustOxyLoss(-1)
+	target.adjustBruteLoss(-healamt*4)
+	target.adjustFireLoss(-healamt*4)
+	target.adjustToxLoss(-healamt)
+	target.adjustOxyLoss(-healamt)
 	return
 
 /obj/item/gun/medbeam/proc/on_beam_release(var/mob/living/target)
 	return
 
 /obj/effect/ebeam/medical
-	name = "medical beam"
+	name = "healing beam"
 
 //////////////////////////////Mech Version///////////////////////////////
 /obj/item/gun/medbeam/mech
