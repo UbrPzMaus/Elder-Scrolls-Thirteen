@@ -13,6 +13,7 @@
 	holder_var_amount = 20 //base magicka cost of default spell (overridden by every spell, ever). negative values = spell regenerates magicka.
 	holder_var_name = "magicka" //for displaying
 
+	human_req = TRUE
 	clothes_req = FALSE //see if it requires magic clothes (note: these give +magicka regen anyway)
 	nonabstract_req = FALSE //spell can only be cast by mobs that are physical entities
 	stat_allowed = FALSE //see if it requires being conscious/alive, need to set to 1 for ghostpells
