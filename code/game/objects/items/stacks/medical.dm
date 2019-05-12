@@ -24,10 +24,6 @@
 			t_him = "him"
 		else if(M.gender == FEMALE)
 			t_him = "her"
-		else if(M.gender == PLURAL)
-			t_him = "them"
-		else
-			t_him = "it"
 		to_chat(user, "<span class='danger'>\The [M] is dead, you cannot help [t_him]!</span>")
 		return
 
