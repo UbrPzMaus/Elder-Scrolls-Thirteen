@@ -73,8 +73,6 @@
 				t_himself = "himself"
 			else if(user.gender == FEMALE)
 				t_himself = "herself"
-			else if(user.gender == PLURAL)
-				t_himself = "themself"
 			user.visible_message("<span class='notice'>[user] starts to apply [src] on [t_himself]...</span>", "<span class='notice'>You begin applying [src] on yourself...</span>")
 			if(!do_mob(user, M, self_delay, extra_checks=CALLBACK(M, /mob/living/proc/can_inject, user, TRUE)))
 				return
